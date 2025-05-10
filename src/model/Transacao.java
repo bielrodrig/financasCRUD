@@ -1,66 +1,27 @@
 package model;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 public class Transacao {
-    private String data;
-    private double valor;
-    private String tipo; // Saida ou Entrada de valor
-    private LocalDate dataLocal;
-
     private int id;
+    private String nome;
+    private double valor;
+    private String tipo;
+    private Date data;
 
-    public int getId() {
-        return id;
-    }
+    // Getters e setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
 
-    public String getData() {
-        return data;
-    }
+    public double getValor() { return valor; }
+    public void setValor(double valor) { this.valor = valor; }
 
-    public void setData(String data) {
-        this.data = data;
-    }
+    public String getTipo() { return tipo; }
+    public void setTipo(String tipo) { this.tipo = tipo; }
 
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public LocalDate getDataLocal() {
-        return dataLocal;
-    }
-
-    public void setDataLocal(LocalDate dataLocal) {
-        this.dataLocal = dataLocal;
-    }
-
-    public Transacao(int id, double valor, String tipo, LocalDate dataLocal) {
-        this.id = id;
-        this.valor = valor;
-        this.tipo = tipo;
-        this.dataLocal = dataLocal;
-    }
-    public Transacao(double valor, String tipo, LocalDate dataLocal) {
-        this.valor = valor;
-        this.tipo = tipo;
-        this.dataLocal = dataLocal;
-    }
-
-
+    public Date getData() { return data; }
+    public void setData(Date data) { this.data = data; }
 }
