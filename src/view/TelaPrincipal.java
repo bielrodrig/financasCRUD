@@ -87,7 +87,7 @@ public class TelaPrincipal extends JFrame {
                 dao.removerTransacao(id);
                 carregarTransacoes(null);
             } else {
-                JOptionPane.showMessageDialog(this, "Selecione uma transação para excluir.");
+                JOptionPane.showMessageDialog(this, "Selecione uma transação para remover.");
 
             }
         }
