@@ -48,4 +48,53 @@ Este projeto não apenas ensina conceitos básicos de programação, mas também
   
 ---
 
+## Como Rodar o Projeto
+
+### Pré-requisitos
+
+Antes de rodar o projeto, certifique-se de ter os seguintes pré-requisitos instalados:
+
+- **Java JDK 8 ou superior**: Necessário para compilar e executar a aplicação.
+  - [Download do JDK](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html)
+  
+- **MySQL**: O banco de dados utilizado para armazenar as transações financeiras.
+  - [Download do MySQL](https://dev.mysql.com/downloads/installer/)
+
+- **IDE Java (recomendado IntelliJ IDEA, Eclipse, NetBeans)**: Para editar, compilar e rodar o código-fonte.
+  - [Download do IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
+  - [Download do Eclipse](https://www.eclipse.org/downloads/)
+
+- **MySQL JDBC Driver**: O driver necessário para conectar o Java com o banco de dados MySQL. Este driver é geralmente incluído na dependência de seu projeto ou você pode adicioná-lo manualmente ao seu projeto.
+
+### Passos para Rodar o Projeto
+
+1. **Configuração do Banco de Dados**
+
+   Antes de rodar a aplicação, você precisa configurar o banco de dados MySQL:
+
+   - Crie uma instância do MySQL em seu sistema local ou em um servidor.
+   - No MySQL, crie um banco de dados com o nome `financas-db`.
+     ```sql
+     CREATE DATABASE financas-db;
+     ```
+   - Crie a tabela de transações dentro do banco de dados:
+     ```sql
+     CREATE TABLE transacoes (
+         id INT AUTO_INCREMENT PRIMARY KEY,
+         nome VARCHAR(255) NOT NULL,
+         valor DECIMAL(10, 2) NOT NULL,
+         tipo VARCHAR(50) NOT NULL,
+         data DATE NOT NULL
+     );
+     ```
+
+2. **Configuração da Conexão JDBC**
+
+   No código fonte do projeto, você precisa configurar a conexão com o banco de dados MySQL. A conexão deve ser feita através do driver JDBC. Exemplo de URL de conexão:
+
+   ```java
+   String url = "jdbc:mysql://localhost:3306/financas-db";
+   String user = "root";
+   String password = "sua_senha";
+
 
