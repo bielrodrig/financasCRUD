@@ -51,6 +51,18 @@ public class TransacaoDAO {
             System.out.println("Erro ao inserir transacao" + e.getMessage());
         }
     }
+    public void removerTransacao(int id) {
+        String sql = "DELETE FROM transacoes WHERE id = ?";
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            System.out.println(" Transação removida com sucesso!");
+
+        } catch (SQLException e) {
+            System.out.println("Erro ao remover transacao" + e.getMessage());
+        }
+    }
 
     public static void main(String[] args) {
         TransacaoDAO dao = new TransacaoDAO();

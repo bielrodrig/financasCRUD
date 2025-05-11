@@ -23,7 +23,7 @@ public class TelaPrincipal extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        JPanel formPanel = new JPanel(new GridLayout(5, 2));
+        JPanel formPanel = new JPanel(new GridLayout(10, 4));
 
         formPanel.add(new JLabel("Nome:"));
         txtNome = new JTextField();
@@ -49,6 +49,10 @@ public class TelaPrincipal extends JFrame {
         btnListar.addActionListener(this::carregarTransacoes);
         formPanel.add(btnListar);
 
+        JButton btnExcluir = new JButton("Excluir");
+        btnExcluir.addActionListener(this::excluirTransacoes);
+        formPanel.add(btnExcluir);
+
         add(formPanel, BorderLayout.NORTH);
 
         // Tabela
@@ -71,6 +75,22 @@ public class TelaPrincipal extends JFrame {
 
         JOptionPane.showMessageDialog(this, "Transação salva com sucesso!");
         limparCampos();
+    }
+
+    private void excluirTransacoes(ActionEvent evt) {
+        int linhaSelecionada = tabela.getSelectedRow();
+        if (linhaSelecionada >= 0) {
+            int confirm = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja excluir a transação", "Confirmar exclusão", JOptionPane.YES_NO_OPTION);
+            if (confirm == JOptionPane.YES_OPTION) {
+                int id = (int) tabelaModel.getValueAt(linhaSelecionada, 0);
+                TransacaoDAO dao = new TransacaoDAO();
+                dao.removerTransacao(id);
+                carregarTransacoes(null);
+            } else {
+                JOptionPane.showMessageDialog(this, "Selecione uma transação para excluir.");
+
+            }
+        }
     }
 
     private void carregarTransacoes(ActionEvent evt) {
