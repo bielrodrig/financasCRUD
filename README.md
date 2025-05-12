@@ -90,11 +90,11 @@ Antes de rodar o projeto, certifique-se de ter os seguintes pré-requisitos inst
 
 2. **Configuração da Conexão JDBC**
 
-   No código fonte do projeto, você precisa configurar a conexão com o banco de dados MySQL. A conexão deve ser feita através do driver JDBC. Exemplo de URL de conexão:
+   No código fonte do projeto, você precisa configurar a conexão com o banco de dados MySQL. A conexão deve ser feita através do driver JDBC. Aqui está um exemplo de URL de conexão:
 
    ```java
    String url = "jdbc:mysql://localhost:3306/financas-db";
    String user = "root";
-   String password = "sua_senha";
+   String password = "12";
 
 
