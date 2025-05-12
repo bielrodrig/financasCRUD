@@ -1,4 +1,4 @@
-# Controle de Finanças Pessoais
+# 💵 Controle de Finanças Pessoais
 
 ## Descrição do Projeto
 
@@ -15,7 +15,7 @@ Este sistema não apenas facilita o controle de gastos e receitas, mas também p
 
 ---
 
-## Funcionalidades
+## ⚙️ Funcionalidades
 
 - **Cadastro de Transações**: O usuário pode cadastrar transações, como entradas e saídas financeiras, com descrição, valor, tipo e data.
 - **Listagem de Transações**: Através de uma tabela, o usuário pode visualizar todas as transações cadastradas, facilitando o acompanhamento.
@@ -24,7 +24,7 @@ Este sistema não apenas facilita o controle de gastos e receitas, mas também p
 
 ---
 
-## Impacto para Recrutadores e Empresas
+## ⭐ Impacto do Projeto
 
 ### 1. **Resolução de Problemas Reais**
 Este projeto vai além de um simples CRUD. Ele resolve um problema cotidiano de forma eficaz, permitindo aos usuários controlar e gerenciar suas finanças pessoais ou de pequenas empresas de maneira organizada e prática. É uma solução que pode ser facilmente escalada ou integrada com outras ferramentas de análise financeira.
@@ -73,9 +73,9 @@ Antes de rodar o projeto, certifique-se de ter os seguintes pré-requisitos inst
    Antes de rodar a aplicação, você precisa configurar o banco de dados MySQL:
 
    - Crie uma instância do MySQL em seu sistema local ou em um servidor.
-   - No MySQL, crie um banco de dados com o nome `financas-db`.
+   - No MySQL, crie um banco de dados com o nome `financas`.
      ```sql
-     CREATE DATABASE financas-db;
+     CREATE DATABASE financas;
      ```
    - Crie a tabela de transações dentro do banco de dados:
      ```sql
@@ -90,11 +90,11 @@ Antes de rodar o projeto, certifique-se de ter os seguintes pré-requisitos inst
 
 2. **Configuração da Conexão JDBC**
 
-   No código fonte do projeto, você precisa configurar a conexão com o banco de dados MySQL. A conexão deve ser feita através do driver JDBC. Exemplo de URL de conexão:
+   No código fonte do projeto, você precisa configurar a conexão com o banco de dados MySQL. A conexão deve ser feita através do driver JDBC. Aqui está um exemplo de URL de conexão:
 
    ```java
    String url = "jdbc:mysql://localhost:3306/financas-db";
    String user = "root";
-   String password = "sua_senha";
+   String password = "12";
 
 
