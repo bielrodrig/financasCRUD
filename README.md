@@ -24,7 +24,7 @@ Este sistema não apenas facilita o controle de gastos e receitas, mas também p
 
 ---
 
-## Impacto para Recrutadores e Empresas
+## ⭐ Impacto do Projeto
 
 ### 1. **Resolução de Problemas Reais**
 Este projeto vai além de um simples CRUD. Ele resolve um problema cotidiano de forma eficaz, permitindo aos usuários controlar e gerenciar suas finanças pessoais ou de pequenas empresas de maneira organizada e prática. É uma solução que pode ser facilmente escalada ou integrada com outras ferramentas de análise financeira.
