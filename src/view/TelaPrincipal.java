@@ -165,7 +165,7 @@ public class TelaPrincipal extends JFrame {
 
     private void estilizarBotao(JButton btn) {
         btn.setBackground(new Color(0, 120, 215));
-        btn.setForeground(Color.WHITE);
+        btn.setForeground(Color.BLACK);
         btn.setFont(new Font("Arial", Font.BOLD, 14));
         btn.setFocusPainted(false);
         btn.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
