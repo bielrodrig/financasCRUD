@@ -1,4 +1,4 @@
-# Controle de Finanças Pessoais
+# 💵 Controle de Finanças Pessoais
 
 ## Descrição do Projeto
 
@@ -15,7 +15,7 @@ Este sistema não apenas facilita o controle de gastos e receitas, mas também p
 
 ---
 
-## Funcionalidades
+## ⚙️ Funcionalidades
 
 - **Cadastro de Transações**: O usuário pode cadastrar transações, como entradas e saídas financeiras, com descrição, valor, tipo e data.
 - **Listagem de Transações**: Através de uma tabela, o usuário pode visualizar todas as transações cadastradas, facilitando o acompanhamento.
