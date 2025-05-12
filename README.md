@@ -73,9 +73,9 @@ Antes de rodar o projeto, certifique-se de ter os seguintes pré-requisitos inst
    Antes de rodar a aplicação, você precisa configurar o banco de dados MySQL:
 
    - Crie uma instância do MySQL em seu sistema local ou em um servidor.
-   - No MySQL, crie um banco de dados com o nome `financas-db`.
+   - No MySQL, crie um banco de dados com o nome `financas`.
      ```sql
-     CREATE DATABASE financas-db;
+     CREATE DATABASE financas;
      ```
    - Crie a tabela de transações dentro do banco de dados:
      ```sql
