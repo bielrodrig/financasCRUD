@@ -1,3 +1,7 @@
+<h4 align="center"> 
+	<img src="http://img.shields.io/static/v1?label=STATUS&message=DESENVOLVIMENTO%20EM%20ANDAMENTO&color=F7DF1E&style=for-the-badge"/>
+</h4>
+
 # 💵 Controle de Finanças Pessoais
 
 ## Descrição do Projeto
