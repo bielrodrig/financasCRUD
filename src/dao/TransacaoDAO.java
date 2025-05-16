@@ -63,11 +63,6 @@ public class TransacaoDAO {
             System.out.println("Erro ao remover transacao" + e.getMessage());
         }
     }
-
-    public static void main(String[] args) {
-        TransacaoDAO dao = new TransacaoDAO();
-        dao.inserirTransacao("Mercado", 130.9, Date.valueOf("2025-05-10"), "Saida");
-    }
 }
 
 

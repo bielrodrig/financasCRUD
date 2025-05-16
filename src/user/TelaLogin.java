@@ -1,4 +1,8 @@
-package view;
+package user;
+
+import dao.CadastroDAO;
+import dao.LoginDAO;
+import view.TelaPrincipal;
 
 import javax.swing.*;
 import java.awt.*;
@@ -40,19 +44,22 @@ public class TelaLogin extends JFrame {
         setVisible(true);
     }
 
-    private void validarLogin(ActionEvent e) {
+    private void validarLogin(ActionEvent evt) {
         String usuario = txtUsuario.getText();
         String senha = new String(txtSenha.getPassword());
 
-        // Validação simples (substitua com integração ao banco de dados mais tarde)
-        if ("admin".equals(usuario) && "1234".equals(senha)) {
-            JOptionPane.showMessageDialog(this, "Login bem-sucedido!");
-            // Aqui você pode abrir a tela principal
-            new TelaPrincipal();  // Chamando a tela principal
-            dispose();  // Fechar a tela de login
+        LoginDAO dao = new LoginDAO(); // agora usando a classe certa
+        boolean valido = dao.validarLogin(usuario, senha);
+
+        if (valido) {
+            JOptionPane.showMessageDialog(this, "Login efetuado com sucesso!");
+            new TelaPrincipal();
+            dispose();
         } else {
-            JOptionPane.showMessageDialog(this, "Usuário ou senha inválidos!", "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Credenciais Inválidas!");
         }
+
+
     }
 
     public static void main(String[] args) {
