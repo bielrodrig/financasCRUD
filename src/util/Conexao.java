@@ -8,7 +8,7 @@ public class Conexao {
 
     private static final String URL = "jdbc:mysql://localhost/financas";
     private static final String USUARIO = "root";
-    private static final String SENHA = "12";
+    private static final String SENHA = "";
 
     public static Connection conectar() {
         try {
