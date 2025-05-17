@@ -1,26 +1,27 @@
 package user;
 
 import dao.CadastroDAO;
-import view.TelaPrincipal;
+import face.ReconhecimentoFacial;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 
 public class TelaCadastro extends JFrame {
     private JTextField txtUsuario;
     private JPasswordField txtSenha;
     private JTextField txtEmail;
     private JButton btnCadastrar;
+    private JButton btnFace;
 
+    // Armazena imagem facial capturada
+    private byte[] imagemFacial;
 
     public TelaCadastro() {
-
-
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(4, 4, 14, 14));
-
+        panel.setLayout(new GridLayout(6, 6, 18, 18));
 
         panel.add(new JLabel("Usuário:"));
         txtUsuario = new JTextField();
@@ -35,34 +36,31 @@ public class TelaCadastro extends JFrame {
         panel.add(txtEmail);
 
         btnCadastrar = new JButton("Cadastrar");
-        btnCadastrar.addActionListener(this::cadastrarUsuario);
+        btnCadastrar.addActionListener(e -> {
+            String nome = txtUsuario.getText();
+            String email = txtEmail.getText();
+            String senha = txtSenha.getText();
+
+            ReconhecimentoFacial face = new ReconhecimentoFacial();
+            byte[] imagem = face.capturarComInterface(); // captura o rosto
+            InputStream imagemStream = new ByteArrayInputStream(imagem);
+            int tamanhoImagem = imagem.length;
+
+            CadastroDAO dao = new CadastroDAO();
+            dao.inserirUsuario(nome, email, senha, imagemStream, tamanhoImagem);
+
+            JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
+        });
         panel.add(btnCadastrar);
 
 
         add(panel);
-        setSize(400, 200);
-        setLocationRelativeTo(null); // Centraliza na tela
+        setSize(800, 500);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-
-
     }
 
-    private void cadastrarUsuario(ActionEvent evt) {
-        String nomeUsuario = txtUsuario.getText();
-        String senhaTexto = txtSenha.getText();
-        String emailUsuario = txtEmail.getText();
-
-        if (nomeUsuario.isEmpty() || senhaTexto.isEmpty() || emailUsuario.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Preencha todos os campos!", "Erro", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        CadastroDAO cadastro = new CadastroDAO();
-        cadastro.inserirUsuario(nomeUsuario, senhaTexto, emailUsuario);
-
-        JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
-    }
 
 
     public static void main(String[] args) {
