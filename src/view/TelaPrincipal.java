@@ -164,14 +164,14 @@ public class TelaPrincipal extends JFrame {
     }
 
     private void estilizarBotao(JButton btn) {
-        btn.setBackground(new Color(0, 120, 215));
-        btn.setForeground(Color.BLACK);
+        Color azul = new Color(0, 120, 215);
+
+        btn.setBackground(azul);              // Fundo azul
+        btn.setForeground(Color.BLACK);       // Texto branco
         btn.setFont(new Font("Arial", Font.BOLD, 14));
         btn.setFocusPainted(false);
         btn.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }
 
-    public static void main(String[] args) {
-        new TelaPrincipal();
-    }
 }

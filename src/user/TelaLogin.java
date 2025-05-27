@@ -38,36 +38,31 @@ public class TelaLogin extends JFrame {
         c.fill = GridBagConstraints.HORIZONTAL;
 
         Font fonteLabel = new Font("Arial", Font.BOLD, 16);
-        Font fonteCampo = new Font("Arial", Font.PLAIN, 14);
+        Font fonteCampo = new Font("Arial", Font.PLAIN, 16);
 
-        // Label Usuário
         c.gridx = 0;
         c.gridy = 0;
         panel.add(new JLabel("Usuário:"), c);
 
-        // Campo Usuário
         c.gridx = 1;
         txtUsuario = new JTextField(35);
         txtUsuario.setFont(fonteCampo);
         panel.add(txtUsuario, c);
 
-        // Label Senha
         c.gridx = 0;
         c.gridy = 1;
         panel.add(new JLabel("Senha:"), c);
 
-        // Campo Senha
         c.gridx = 1;
         txtSenha = new JPasswordField(35);
         txtSenha.setFont(fonteCampo);
         panel.add(txtSenha, c);
 
-        // Checkbox Mostrar Senha
         c.gridx = 1;
         c.gridy = 2;
         chkMostrarSenha = new JCheckBox("Mostrar senha");
         chkMostrarSenha.setBackground(Color.WHITE);
-        chkMostrarSenha.setFont(new Font("Arial", Font.PLAIN, 13));
+        chkMostrarSenha.setFont(new Font("Arial", Font.PLAIN, 14));
         chkMostrarSenha.addActionListener(e -> {
             if (chkMostrarSenha.isSelected()) {
                 txtSenha.setEchoChar((char) 0);
@@ -77,7 +72,6 @@ public class TelaLogin extends JFrame {
         });
         panel.add(chkMostrarSenha, c);
 
-        // Botão Login
         c.gridx = 1;
         c.gridy = 3;
         btnLogin = new JButton("Entrar");
@@ -85,7 +79,6 @@ public class TelaLogin extends JFrame {
         btnLogin.addActionListener(this::validarLogin);
         panel.add(btnLogin, c);
 
-        // Botão Cadastro
         c.gridx = 1;
         c.gridy = 4;
         btnCadastro = new JButton("Não tem cadastro? Clique aqui");
@@ -126,11 +119,11 @@ public class TelaLogin extends JFrame {
         dispose();
     }
     private void estilizarBotao(JButton btn) {
-        btn.setBackground(new Color(0, 120, 215));  // Azul
-        btn.setForeground(Color.BLACK);             // Texto preto
+        btn.setBackground(new Color(0, 120, 215));
+        btn.setForeground(Color.WHITE);
         btn.setFont(new Font("Arial", Font.BOLD, 14));
         btn.setFocusPainted(false);
-        btn.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20)); // Espaçamento interno
+        btn.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
     }
 
     public static void main(String[] args) {
