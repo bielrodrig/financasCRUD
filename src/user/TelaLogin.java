@@ -2,7 +2,6 @@ package user;
 
 import dao.LoginDAO;
 import view.TelaPrincipal;
-import user.TelaCadastro;
 
 import javax.swing.*;
 import java.awt.*;
@@ -38,24 +37,28 @@ public class TelaLogin extends JFrame {
         c.fill = GridBagConstraints.HORIZONTAL;
 
         Font fonteLabel = new Font("Arial", Font.BOLD, 16);
-        Font fonteCampo = new Font("Arial", Font.PLAIN, 16);
+        Font fonteCampo = new Font("Arial", Font.PLAIN, 14);
 
+        JLabel lblUsuario = new JLabel("Usuário:");
+        lblUsuario.setFont(fonteLabel);
         c.gridx = 0;
         c.gridy = 0;
-        panel.add(new JLabel("Usuário:"), c);
+        panel.add(lblUsuario, c);
 
-        c.gridx = 1;
         txtUsuario = new JTextField(35);
         txtUsuario.setFont(fonteCampo);
+        c.gridx = 1;
         panel.add(txtUsuario, c);
 
+        JLabel lblSenha = new JLabel("Senha:");
+        lblSenha.setFont(fonteLabel);
         c.gridx = 0;
         c.gridy = 1;
-        panel.add(new JLabel("Senha:"), c);
+        panel.add(lblSenha, c);
 
-        c.gridx = 1;
         txtSenha = new JPasswordField(35);
         txtSenha.setFont(fonteCampo);
+        c.gridx = 1;
         panel.add(txtSenha, c);
 
         c.gridx = 1;
@@ -118,6 +121,7 @@ public class TelaLogin extends JFrame {
         new TelaCadastro();
         dispose();
     }
+
     private void estilizarBotao(JButton btn) {
         btn.setBackground(new Color(0, 120, 215));
         btn.setForeground(Color.WHITE);
@@ -129,5 +133,4 @@ public class TelaLogin extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(TelaLogin::new);
     }
-
 }
