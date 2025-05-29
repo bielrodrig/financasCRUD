@@ -1,13 +1,13 @@
 package user;
 
 import dao.CadastroDAO;
-import face.ReconhecimentoFacial;
+// import face.ReconhecimentoFacial;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
+// import java.io.ByteArrayInputStream;
+// import java.io.InputStream;
 
 public class TelaCadastro extends JFrame {
     private JTextField txtUsuario;
@@ -73,7 +73,7 @@ public class TelaCadastro extends JFrame {
         c.gridx = 1;
         panel.add(txtEmail, c);
 
-        // Botão de cadastrar com captura facial
+        // Botão de cadastrar
         c.gridx = 1;
         c.gridy = 3;
         btnCadastrar = new JButton("Cadastrar");
@@ -109,6 +109,8 @@ public class TelaCadastro extends JFrame {
             return;
         }
 
+        // --- BLOCO COMENTADO DO RECONHECIMENTO FACIAL ---
+        /*
         ReconhecimentoFacial face = new ReconhecimentoFacial();
         byte[] imagem = face.capturarComInterface(); // Captura do rosto
         if (imagem == null) {
@@ -118,9 +120,11 @@ public class TelaCadastro extends JFrame {
 
         InputStream imagemStream = new ByteArrayInputStream(imagem);
         int tamanhoImagem = imagem.length;
+        */
 
+        // Cadastro sem foto
         CadastroDAO dao = new CadastroDAO();
-        dao.inserirUsuario(nome, email, senha, imagemStream, tamanhoImagem);
+        dao.inserirUsuario(nome, email, senha, null, 0); // Passa null e 0 para imagem
 
         JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
         new TelaLogin();
