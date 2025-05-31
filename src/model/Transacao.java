@@ -9,7 +9,6 @@ public class Transacao {
     private String tipo;
     private Date data;
 
-    // Getters e setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
