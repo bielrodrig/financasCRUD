@@ -20,28 +20,28 @@ Fazendo minha mãe adotar uma educação financeira mais elevada!
 
 ## ⚙️ Funcionalidades
 
-- ✅ Cadastro de Transações: Insira entradas e saídas com nome, valor, data e tipo (entrada/saída).
-- 🔍 Listagem de Transações: Visualize todas as transações realizadas em uma tabela organizada.
-- 🗑️ Remoção de Transações: Delete lançamentos de forma simples.
-- 💾 Armazenamento em Banco de Dados: Todos os dados são salvos no MySQL, garantindo persistência e segurança.
+- Cadastro de Transações: Insira entradas e saídas com nome, valor, data e tipo (entrada/saída).
+- Listagem de Transações: Visualize todas as transações realizadas em uma tabela organizada.
+- Remoção de Transações: Delete lançamentos de forma simples.
+- Armazenamento em Banco de Dados: Todos os dados são salvos no MySQL, garantindo persistência e segurança.
 
 ---
 
 ## 🚧 Melhorias em Desenvolvimento
 
-- 🧮 **Cálculo Total dos Gastos e Receitas:** Implementação de um painel que mostra automaticamente o total de entradas, saídas e saldo final.
-- 📊 **Relatórios Financeiros:** Gerar relatórios periódicos (mensais, semanais, por tipo de gasto) em PDF ou na própria interface.
-- 👁️ **Reconhecimento Facial:** Adicionar uma camada extra de segurança ao sistema através de reconhecimento facial para autenticação do usuário.
-- 🤖 **Integração com IA:** Implementação de uma inteligência artificial que ajuda o usuário dando dicas financeiras, insights sobre os gastos e até sugestões de economia.
+- **Cálculo Total dos Gastos e Receitas:** Implementação de um painel que mostra automaticamente o total de entradas, saídas e saldo final.
+- **Relatórios Financeiros:** Gerar relatórios periódicos (mensais, semanais, por tipo de gasto) em PDF ou na própria interface.
+- **Reconhecimento Facial:** Adicionar uma camada extra de segurança ao sistema através de reconhecimento facial para autenticação do usuário.
+- **Integração com IA:** Implementação de uma inteligência artificial que ajuda o usuário dando dicas financeiras, insights sobre os gastos e até sugestões de economia.
 
 ---
 
 ## 🔥 Impacto do Projeto
 
-- 🏆 **Resolução de um Problema Real:** Sistema pensado e desenvolvido para pessoas que não estão familiarizadas com planilhas ou sistemas complexos.
-- 🎯 **Solução Simples e Intuitiva:** Interface amigável, feita com Java Swing, sem burocracia.
-- 📈 **Escalável:** Pode ser evoluído para gerar gráficos, relatórios e até controle de orçamento mensal.
-- 💼 **Prática Profissional:** Aplicação de conceitos de desenvolvimento real, banco de dados, boas práticas e segurança.
+- **Resolução de um Problema Real:** Sistema pensado e desenvolvido para pessoas que não estão familiarizadas com planilhas ou sistemas complexos.
+- **Solução Simples e Intuitiva:** Interface amigável, feita com Java Swing, sem burocracia.
+- **Escalável:** Pode ser evoluído para gerar gráficos, relatórios e até controle de orçamento mensal.
+- **Prática Profissional:** Aplicação de conceitos de desenvolvimento real, banco de dados, boas práticas e segurança.
 
 ---
 
