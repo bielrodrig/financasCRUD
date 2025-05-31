@@ -48,7 +48,7 @@ Fazendo minha mãe adotar uma educação financeira mais elevada!
 ## 🚀 Tecnologias Utilizadas
 
 - **Java (Swing)** – Interface Gráfica
-- **MySQL** – Banco de Dados
+- **MySQL com o XAMPP** – Banco de Dados
 - **JDBC** – Conexão Java + MySQL
 - **Maven** – Gerenciamento de dependências
 
