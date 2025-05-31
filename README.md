@@ -13,10 +13,8 @@ Este projeto tem como objetivo fornecer uma ferramenta prática e intuitiva para
 ## 🎯 Motivação Pessoal
 
 Esse projeto surgiu de uma necessidade real dentro da minha própria casa. Minha mãe sempre teve dificuldade para se organizar financeiramente. Ela até tentou aprender a usar Excel, mas sentiu que seria necessário fazer um curso para conseguir usar de forma eficiente, o que acabava sendo complicado para ela.  
->  
-> Pensando nisso, resolvi desenvolver uma solução simples, intuitiva e direta, onde ela pudesse facilmente registrar seus gastos, visualizar suas despesas e controlar suas finanças sem complicação.  
->  
-> Fazendo minha mãe adotar uma educação financeira mais elevada!
+Pensando nisso, resolvi desenvolver uma solução simples, intuitiva e direta, onde ela pudesse facilmente registrar seus gastos, visualizar suas despesas e controlar suas finanças sem complicação.  
+Fazendo minha mãe adotar uma educação financeira mais elevada!
 
 ---
 
