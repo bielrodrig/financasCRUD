@@ -16,7 +16,7 @@ Esse projeto surgiu de uma necessidade real dentro da minha própria casa. Minha
 >  
 > Pensando nisso, resolvi desenvolver uma solução simples, intuitiva e direta, onde ela pudesse facilmente registrar seus gastos, visualizar suas despesas e controlar suas finanças sem complicação.  
 >  
-> Se minha mãe conseguiu usar, qualquer um consegue! 😄
+> Fazendo minha mãe adotar uma educação financeira mais elevada!
 
 ---
 
