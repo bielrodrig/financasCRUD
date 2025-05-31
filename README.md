@@ -71,9 +71,20 @@ Execute os seguintes comandos no seu MySQL:
 CREATE DATABASE financas;
 
 CREATE TABLE transacoes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT(11) NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
-    valor DECIMAL(10, 2) NOT NULL,
+    valor DOUBLE NOT NULL,
     tipo VARCHAR(50) NOT NULL,
-    data DATE NOT NULL
+    data DATE NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE usuarios (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    foto_face MEDIUMBLOB DEFAULT NULL,
+    PRIMARY KEY (id),
+    UNIQUE KEY email (email)
 );
